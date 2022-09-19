@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Module2 group project</title>
+    </head>
+	<body>
 <?php
 	session_start();
 	// Get the filename and make sure it is valid
@@ -20,6 +26,7 @@
 		exit;
 	}
 
+	//move the file to the userFiles directory
 	$full_path = sprintf("/srv/uploads/%sFiles/%s", $username, $filename);
 	if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path) ){
 		header("Location: userInterface.php");
@@ -32,3 +39,5 @@
 <form name = "input" action = "userInterface.php" method = "get">
 <input type ="submit" value="Back"/>
 </form>
+</body>
+</html>

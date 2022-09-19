@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Module2 group project</title>
+    </head>
+<body>
 <?php
 session_start();
 $username = $_SESSION['userName'];
@@ -31,4 +37,5 @@ header('content-disposition: inline; filename="'.$fileName.'";');
 readfile($full_path);
 
 ?>
-
+</body>
+</html>
