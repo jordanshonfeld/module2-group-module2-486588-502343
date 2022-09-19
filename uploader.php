@@ -4,6 +4,9 @@
 	$filename = basename($_FILES['uploadedfile']['name']);
 	if( !preg_match('/^[\w_\.\-]+$/', $filename) ){
 		echo "Invalid filename";
+		echo'<form name = "input" action = "userInterface.php" method = "get">
+			<input type ="submit" value="Back"/>
+		</form>';
 		exit;
 	}
 
@@ -11,6 +14,9 @@
 	$username = $_SESSION['userName'];
 	if( !preg_match('/^[\w_\-]+$/', $username) ){
 		echo "Invalid username";
+		echo'<form name = "input" action = "userInterface.php" method = "get">
+		<input type ="submit" value="Back"/>
+		</form>';
 		exit;
 	}
 
@@ -19,8 +25,10 @@
 		header("Location: userInterface.php");
 		exit;
 	}else{
-		header("Location: userInterface.php");
-		exit;
+		echo '<h1> upload failed </h1>';
 	}
 ?>
 
+<form name = "input" action = "userInterface.php" method = "get">
+<input type ="submit" value="Back"/>
+</form>
