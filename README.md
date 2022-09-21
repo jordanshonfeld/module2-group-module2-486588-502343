@@ -30,3 +30,6 @@ joey
 fsl
 alice
 ```
+
+-5 cannot view uploaded files
++2 for visual effects
